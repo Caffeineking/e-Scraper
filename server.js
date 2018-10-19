@@ -28,17 +28,17 @@ app.use(express.static("public"));
 
 // Connect to the Mongo DB
 
-var databaseUri = "mongodb://localhost/EsportArticle";
+// var databaseUri = "mongodb://localhost/EsportArticle";
 
-if (process.env.MONGODB_URI) {
-  mongoose.connect(process.env.MONGODB_URI);
-}
-else {
-  mongoose.connect(databaseUri);
-}
+// if (process.env.MONGODB_URI) {
+//   mongoose.connect(process.env.MONGODB_URI);
+// }
+// else {
+//   mongoose.connect(databaseUri);
+// }
 // mongoose.connect("mongodb://localhost/EsportArticle", { useNewUrlParser: true });
-// var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/";
-// mongoose.connect(MONGODB_URI);
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/ESportArticle";
+mongoose.connect(MONGODB_URI);
 // Routes
 
 
